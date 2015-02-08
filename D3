@@ -1,0 +1,9 @@
+<!Doctype html>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<div id="cal-heatmap"></div>
+<script type="text/javascript">
+	var cal = new CalHeatMap();
+	cal.init({
+		data: "datas.json"
+	});
+</script>
