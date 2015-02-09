@@ -51,8 +51,15 @@
 <link href="cal-heatmap.css" rel="stylesheet">
 <div id="cal-heatmap"></div>
 <script type="text/javascript">
-	var cal = new CalHeatMap();
-	cal.init({
-		data: "datas.json"
-	});
+	var calendar = new CalHeatMap();
+    calendar.init({
+        data: data,
+        start: new Date(2015, 1),
+        domain: "month",
+        subDomain: "day",
+        range: 6,
+        scale: [40, 60, 80, 100]
+    });
+
+
 </script>
