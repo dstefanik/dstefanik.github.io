@@ -52,7 +52,9 @@
 <div id="cal-heatmap"></div>
 <script type="text/javascript">
 	var calendar = new CalHeatMap();
-	    calendar.init({
+	var dt = new Date();
+    	dt.setDate(dt.getDate() + 1);
+	calendar.init({
 		data: "datas-years.json",
 		start: new Date(2015, 1),
 		id: "graph_c",
