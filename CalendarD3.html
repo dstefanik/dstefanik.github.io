@@ -61,8 +61,6 @@
 		domain: "month",
 		subdomain: "day",
 		range: 6,
-		previousSelector: "#example-g-PreviousDomain-selector",
-		nextSelector: "#example-g-NextDomain-selector",
 		scale: [20, 40, 60, 80]
 
     });
@@ -72,5 +70,13 @@
 	range: 1,
 	displayLegend: false,
 	highlight: ["now", dt]
+});
+calendar.init({
+	itemSelector: "#animationDuration-a",
+	domain: "month",
+	range: 6,
+	previousSelector: "#animationDuration-previous",
+	nextSelector: "#animationDuration-next",
+	itemNamespace: "animationDuration-a"
 });
 </script>
