@@ -58,9 +58,12 @@
 		data: "CalendarData.json",
 		start: new Date(2015, 1),
 		id: "graph_c",
+		itemSelector: "#example-a",
 		domain: "month",
 		subdomain: "day",
 		range: 6,
+		previousSelector: "#example-a-PreviousDomain-selector",
+		nextSelector: "#example-a-NextDomain-selector",
 		scale: [20, 40, 60, 80]
 
     });
@@ -70,13 +73,5 @@
 	range: 1,
 	displayLegend: false,
 	highlight: ["now", dt]
-});
-calendar.init({
-	itemSelector: "#animationDuration-a",
-	domain: "month",
-	range: 6,
-	previousSelector: "#animationDuration-previous",
-	nextSelector: "#animationDuration-next",
-	itemNamespace: "animationDuration-a"
 });
 </script>
