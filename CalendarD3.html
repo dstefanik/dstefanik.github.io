@@ -55,12 +55,15 @@
 	var dt = new Date();
     	dt.setDate(dt.getDate());
 	calendar.init({
+		itemSelector: "#example-g",,
 		data: "CalendarData.json",
 		start: new Date(2015, 1),
 		id: "graph_c",
 		domain: "month",
 		subdomain: "day",
 		range: 6,
+		previousSelector: "#example-g-PreviousDomain-selector",
+		nextSelector: "#example-g-NextDomain-selector",
 		scale: [20, 40, 60, 80]
 
     });
