@@ -54,15 +54,25 @@
 	var calendar = new CalHeatMap();
 	var dt = new Date();
     	dt.setDate(dt.getDate());
-	calendar.init({
-		data: "CalendarData.json",
-		start: new Date(2015, 1),
-		id: "graph_c",
-		domain: "month",
-		subdomain: "day",
-		range: 6,
-		scale: [20, 40, 60, 80]
-
+	cal.init({
+	itemSelector: "#example-g",
+	domain: "month",
+	subDomain: "x_day",
+	data: "datas-years.json",
+	start: new Date(2000, 0, 5),
+	cellSize: 20,
+	cellPadding: 5,
+	domainGutter: 20,
+	range: 2,
+	domainDynamicDimension: false,
+	previousSelector: "#example-g-PreviousDomain-selector",
+	nextSelector: "#example-g-NextDomain-selector",
+	domainLabelFormat: function(date) {
+		moment.lang("en");
+		return moment(date).format("MMMM").toUpperCase();
+	},
+	subDomainTextFormat: "%d",
+	legend: [20, 40, 60, 80]
     });
     calendar.init({
 	itemSelector: "#highlight-a",
@@ -70,12 +80,5 @@
 	range: 1,
 	displayLegend: false,
 	highlight: ["now", dt]
-});
-Calendar.init({
-	itemSelector: "#example-b",
-	domain: "month",
-	range: 6,
-	previousSelector: "#example-b-PreviousDomain-selector",
-	nextSelector: "#example-b-NextDomain-selector",
 });
 </script>
