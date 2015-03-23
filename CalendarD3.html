@@ -55,7 +55,6 @@
 	var dt = new Date();
     	dt.setDate(dt.getDate());
 	calendar.init({
-	nextSelector: "#next",
 	data: "CalendarData.json",
 	start: new Date(2015, 1),
 	domain: "month",
@@ -66,4 +65,6 @@
 	subDomainTextFormat: "%d",
 	scale: [20, 40, 60, 80]
 });
+	calendar.next();
+	calendar.previous();
 </script>
