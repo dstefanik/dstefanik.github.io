@@ -55,12 +55,20 @@
 	var dt = new Date();
     	dt.setDate(dt.getDate());
 	calendar.init({
+	itemSelector: "#example-g",
 	data: "CalendarData.json",
 	start: new Date(2015, 1),
 	id: "graph_c",
 	domain: "month",
 	subdomain: "day",
+	cellSize: 20,
+	cellPadding: 5,
+	domainGutter: 20,
 	range: 6,
+	domainDynamicDimension: false,
+	previousSelector: "#example-g-PreviousDomain-selector",
+	nextSelector: "#example-g-NextDomain-selector",
+	ubDomainTextFormat: "%d",
 	scale: [20, 40, 60, 80]
 });
 	calendar.init({
