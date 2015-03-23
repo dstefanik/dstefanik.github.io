@@ -65,7 +65,13 @@
 	subDomainTextFormat: "%d",
 	scale: [20, 40, 60, 80]
 });
-
+	calendar.init({
+	itemSelector: "#highlight-a",
+	domain: "day",
+	range: 1,
+	displayLegend: false,
+	highlight: ["now", dt]
+});
 	calendar.init({
 	itemSelector: "#example-g",
 	domain: "month",
