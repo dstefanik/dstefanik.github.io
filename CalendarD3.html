@@ -72,4 +72,17 @@
 	displayLegend: false,
 	highlight: ["now", dt]
 });
+	calendar.init({
+	itemSelector: "#example-g",
+	domain: "month",
+	subDomain: "x_day",
+	domainDynamicDimension: false,
+	previousSelector: "#example-g-PreviousDomain-selector",
+	nextSelector: "#example-g-NextDomain-selector",
+	domainLabelFormat: function(date) {
+		moment.lang("en");
+		return moment(date).format("MMMM").toUpperCase();
+	},
+	subDomainTextFormat: "%d",
+});
 </script>
