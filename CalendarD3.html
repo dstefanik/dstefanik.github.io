@@ -61,24 +61,24 @@
 	var dt = new Date();
     	dt.setDate(dt.getDate());
 	calendar.init({
-	data: "CalendarData.json",
-	start: new Date(2016, 1),
+cal.init({
+	itemSelector: "#example-g",
 	domain: "month",
-	subdomain: "x_day",
+	subDomain: "x_day",
+	data: "datas-years.json",
+	start: new Date(2000, 0, 5),
 	cellSize: 20,
-	cellPadding: 2,
-	range: 8,
+	cellPadding: 5,
+	domainGutter: 20,
+	range: 2,
 	domainDynamicDimension: false,
 	previousSelector: "#example-g-PreviousDomain-selector",
 	nextSelector: "#example-g-NextDomain-selector",
+	domainLabelFormat: function(date) {
+		moment.lang("en");
+		return moment(date).format("MMMM").toUpperCase();
+	},
 	subDomainTextFormat: "%d",
-	scale: [20, 40, 60, 80]
-});
-calendar.init({
-	itemSelector: "#highlight-a",
-	domain: "day",
-	range: 1,
-	displayLegend: false,
-	highlight: ["now", dt]
+	legend: [20, 40, 60, 80]
 });
 </script>
