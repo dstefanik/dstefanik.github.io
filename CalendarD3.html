@@ -60,30 +60,23 @@
 	var dt = new Date();
     	dt.setDate(dt.getDate());
 	calendar.init({
-	data: "CalendarData.json",
-	start: new Date(2016, 1),
+	itemSelector: "#example-g",
 	domain: "month",
 	subdomain: "x_day",
+	data: "CalendarData.json",
+	start: new Date(2016, 1),
 	cellSize: 20,
 	cellPadding: 2,
 	range: 8,
-	subDomainTextFormat: "%d",
-	scale: [20, 40, 60, 80]
-});
-	calendar.init({
-	itemSelector: "#highlight-a",
-	domain: "day",
-	range: 1,
-	displayLegend: false,
-	highlight: ["now", dt]
-});
-	calendar.init({
-	itemSelector: "#example-g",
-	domain: "month",
-	subDomain: "x_day",
 	domainDynamicDimension: false,
 	previousSelector: "#example-g-PreviousDomain-selector",
 	nextSelector: "#example-g-NextDomain-selector",
+	domainLabelFormat: function(date) {
+		moment.lang("en");
+		return moment(date).format("MMMM").toUpperCase();
+	},
 	subDomainTextFormat: "%d",
+	scale: [20, 40, 60, 80]
 });
+	
 </script>
