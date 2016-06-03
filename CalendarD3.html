@@ -69,8 +69,6 @@
 	cellPadding: 2,
 	range: 8,
 	domainDynamicDimension: false,
-	previousSelector: "#example-g-PreviousDomain-selector",
-	nextSelector: "#example-g-NextDomain-selector",
 	subDomainTextFormat: "%d",
 	scale: [20, 40, 60, 80]
 });
@@ -82,10 +80,10 @@ calendar.init({
 	highlight: ["now", dt]
 });
 calendar.init({
-	itemSelector: "#example-g",
+	itemSelector: "#previousSelector-a",
 	domain: "month",
 	range: 8,
-	previousSelector: "#example-g-PreviousDomain-selector",
-	nextSelector: "#example-g-NextDomain-selector",
+	previousSelector: "#previousSelector-a-previous",
+	nextSelector: "#previousSelector-a-next"
 });
 </script>
