@@ -50,9 +50,9 @@
 <script src="cal-heatmap.min.js"></script>
 <link href="cal-heatmap.css" rel="stylesheet">
 <div id="cal-heatmap">
-	<button id="#example-g-PreviousDomain-selector" style="margin-bottom: 10px;" class="btn">
+	<button id="example-g-NextDomain-selector" style="margin-bottom: 10px;" class="btn">
 		<i class="icon icon-chevron-left"></i></button>
-	<button id="#example-g-NextDomain-selector" style="margin-bottom: 10px;" class="btn">
+	<button id="example-g-NextDomain-selector" style="margin-bottom: 10px;" class="btn">
 		<i class="icon icon-chevron-right"></i></button>
 	</div>
 </div>
@@ -61,24 +61,24 @@
 	var dt = new Date();
     	dt.setDate(dt.getDate());
 	calendar.init({
-cal.init({
-	itemSelector: "#example-g",
-	domain: "month",
-	subDomain: "x_day",
 	data: "CalendarData.json",
 	start: new Date(2016, 1),
+	domain: "month",
+	subdomain: "x_day",
 	cellSize: 20,
-	cellPadding: 5,
-	domainGutter: 20,
-	range: 2,
+	cellPadding: 2,
+	range: 8,
 	domainDynamicDimension: false,
 	previousSelector: "#example-g-PreviousDomain-selector",
 	nextSelector: "#example-g-NextDomain-selector",
-	domainLabelFormat: function(date) {
-		moment.lang("en");
-		return moment(date).format("MMMM").toUpperCase();
-	},
 	subDomainTextFormat: "%d",
-	legend: [20, 40, 60, 80]
+	scale: [20, 40, 60, 80]
+});
+calendar.init({
+	itemSelector: "#highlight-a",
+	domain: "day",
+	range: 1,
+	displayLegend: false,
+	highlight: ["now", dt]
 });
 </script>
