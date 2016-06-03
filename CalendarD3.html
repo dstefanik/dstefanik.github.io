@@ -50,9 +50,9 @@
 <script src="cal-heatmap.min.js"></script>
 <link href="cal-heatmap.css" rel="stylesheet">
 <div id="cal-heatmap">
-	<button id="previousSelector-a-previous" style="margin-bottom: 10px;" class="btn">
+	<button id="#example-g-PreviousDomain-selector" style="margin-bottom: 10px;" class="btn">
 		<i class="icon icon-chevron-left"></i></button>
-	<button id="previousSelector-a-next" style="margin-bottom: 10px;" class="btn">
+	<button id="#example-g-NextDomain-selector" style="margin-bottom: 10px;" class="btn">
 		<i class="icon icon-chevron-right"></i></button>
 	</div>
 </div>
@@ -68,9 +68,9 @@
 	cellSize: 20,
 	cellPadding: 2,
 	range: 8,
-	previousSelector: "#previousSelector-a-previous",
-	nextSelector: "#previousSelector-a-next"
 	domainDynamicDimension: false,
+	previousSelector: "#example-g-PreviousDomain-selector",
+	nextSelector: "#example-g-NextDomain-selector",
 	subDomainTextFormat: "%d",
 	scale: [20, 40, 60, 80]
 });
@@ -80,12 +80,5 @@ calendar.init({
 	range: 1,
 	displayLegend: false,
 	highlight: ["now", dt]
-});
-calendar.init({
-	itemSelector: "#previousSelector-a",
-	domain: "month",
-	range: 8,
-	previousSelector: "#previousSelector-a-previous",
-	nextSelector: "#previousSelector-a-next"
 });
 </script>
