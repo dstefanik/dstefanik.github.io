@@ -50,7 +50,6 @@
 <script src="cal-heatmap.min.js"></script>
 <link href="cal-heatmap.css" rel="stylesheet">
 <div id="cal-heatmap">
-	<div style="float:none;margin-top: 20px;">
 	<button id="example-g-NextDomain-selector" style="margin-bottom: 10px;" class="btn">
 		<i class="icon icon-chevron-left"></i></button>
 	<button id="example-g-NextDomain-selector" style="margin-bottom: 10px;" class="btn">
@@ -62,7 +61,6 @@
 	var dt = new Date();
     	dt.setDate(dt.getDate());
 	calendar.init({
-	itemSelector: "#example-g",
 	data: "CalendarData.json",
 	start: new Date(2016, 1),
 	domain: "month",
